@@ -27,7 +27,6 @@ venv/
 ENV/
 
 # Data & Models (Prevents pushing the CSV and saved models to Git)
-*.csv
 *.dat
 *.json
 *.pkl
