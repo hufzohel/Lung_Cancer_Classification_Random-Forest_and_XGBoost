@@ -1,1 +1,46 @@
-.venv
+# .gitignore
+
+# Python/Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+ENV/
+
+# Data & Models (Prevents pushing the CSV and saved models to Git)
+*.csv
+*.dat
+*.json
+*.pkl
+*.h5
+best_xgb_lung_cancer.json
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

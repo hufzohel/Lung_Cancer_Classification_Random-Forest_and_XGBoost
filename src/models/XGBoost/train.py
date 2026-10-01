@@ -1,18 +1,20 @@
 import xgboost as xgb
 from sklearn.metrics import roc_auc_score, classification_report
+from sklearn.model_selection import StratifiedKFold
 import numpy as np
-from src.data.preprocess import LungCancerDataLoader
+import pandas as pd
 
 def run_kfold_training():
-    loader = LungCancerDataLoader()
-    
+    train_data = pd.read_csv("data/processed/train.csv")
     auc_scores = []
-    best_auc = 0.0
-    best_model = None
-    
-    print("Starting Stratified K-Fold Training...\n")
-    
-    for fold, X_train, y_train, X_val, y_val in loader.load_kfold_train_val(n_splits=5):
+    best_auc = 0
+
+    skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+    for train_idx, val_idx in skf.split(train_data.drop('LUNG_CANCER', axis=1), train_data['LUNG_CANCER']):
+        X_train, X_val = train_data.drop('LUNG_CANCER', axis=1).iloc[train_idx], train_data.drop('LUNG_CANCER', axis=1).iloc[val_idx]
+        y_train, y_val = train_data['LUNG_CANCER'].iloc[train_idx], train_data['LUNG_CANCER'].iloc[val_idx]
+
         # Calculate scale_pos_weight dynamically for each fold's distribution
         scale_weight = (y_train == 0).sum() / (y_train == 1).sum()
         
