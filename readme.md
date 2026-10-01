@@ -2,6 +2,10 @@
 
 Đồ án Machine Learning sử dụng **Random Forest** và **XGBoost** cho bài toán phân loại ung thư phổi.
 
+## Instructions:
+1. Cài đặt các package cần thiết: pip install -r requirements.txt
+2. Chạy từ root: ví dụ - py -m src.data.preprocess
+
 ## Cấu trúc dự án
 
 ```text
