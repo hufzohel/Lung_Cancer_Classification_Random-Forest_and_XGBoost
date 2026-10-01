@@ -77,27 +77,27 @@ class DataPreprocessor:
             
         return df
 
-    # Not neccessary for xgboost and random forest
-    # def encode_features(self, df):
-    #     """6. Encode categorical features and target to 1/0 binary format."""
-    #     df = df.copy()
+    # Not neccessary for xgboost and random forest abstractly but this shit is real for the implementation of scikit learn for some reason
+    def encode_features(self, df):
+        """6. Encode categorical features and target to 1/0 binary format."""
+        df = df.copy()
         
-    #     # Target and Gender
-    #     df['LUNG_CANCER'] = df['LUNG_CANCER'].map({'YES': 1, 'NO': 0})
-    #     df['GENDER'] = df['GENDER'].map({'M': 1, 'F': 0})
+        # Target and Gender
+        df['LUNG_CANCER'] = df['LUNG_CANCER'].map({'YES': 1, 'NO': 0})
+        df['GENDER'] = df['GENDER'].map({'M': 1, 'F': 0})
         
-    #     # The survey encodes symptoms as 1 (NO) and 2 (YES). Map to 0 and 1.
-    #     symptom_columns = [
-    #         'SMOKING', 'YELLOW_FINGERS', 'ANXIETY', 'PEER_PRESSURE', 
-    #         'CHRONIC DISEASE', 'FATIGUE', 'ALLERGY', 'WHEEZING', 
-    #         'ALCOHOL CONSUMING', 'COUGHING', 'SHORTNESS OF BREATH', 
-    #         'SWALLOWING DIFFICULTY', 'CHEST PAIN'
-    #     ]
+        # The survey encodes symptoms as 1 (NO) and 2 (YES). Map to 0 and 1.
+        symptom_columns = [
+            'SMOKING', 'YELLOW_FINGERS', 'ANXIETY', 'PEER_PRESSURE', 
+            'CHRONIC DISEASE', 'FATIGUE', 'ALLERGY', 'WHEEZING', 
+            'ALCOHOL CONSUMING', 'COUGHING', 'SHORTNESS OF BREATH', 
+            'SWALLOWING DIFFICULTY', 'CHEST PAIN'
+        ]
         
-    #     for col in symptom_columns:
-    #         df[col] = df[col].map({1: 0, 2: 1})
+        for col in symptom_columns:
+            df[col] = df[col].map({1: 0, 2: 1})
             
-    #     return df
+        return df
 
     # def remove_irrelevant_columns(self, df):
     #     """7. Remove any accidental indices, IDs, or leakage candidates."""
@@ -138,7 +138,7 @@ class DataPreprocessor:
         # df = self.check_missing_values(df)
         df = self.check_duplicates(df)
         df = self.validate_values(df)
-        # df = self.encode_features(df)
+        df = self.encode_features(df)
         # df = self.remove_irrelevant_columns(df)
         
         X, y = self.split_features_target(df)

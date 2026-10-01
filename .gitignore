@@ -28,10 +28,9 @@ ENV/
 
 # Data & Models (Prevents pushing the CSV and saved models to Git)
 *.dat
-*.json
+# *.json
 *.pkl
 *.h5
-best_xgb_lung_cancer.json
 
 # Jupyter Notebooks
 .ipynb_checkpoints
