@@ -1,0 +1,10 @@
+{
+  "accuracy": 0.9285714285714286,
+  "balanced_accuracy": 0.9583333333333333,
+  "f1_macro": 0.8782608695652174,
+  "roc_auc": 0.9765625,
+  "recall_no": 1.0,
+  "recall_yes": 0.9166666666666666,
+  "n_test": 56,
+  "selected_model": "tuned_random_forest"
+}
