@@ -7,6 +7,15 @@ SEED = 42
 FOLDS = 5
 JOBS = 2
 
+TARGET = "LUNG_CANCER"
+FEATURES = [
+    "GENDER", "AGE", "SMOKING", "YELLOW_FINGERS", "ANXIETY",
+    "PEER_PRESSURE", "CHRONIC DISEASE", "FATIGUE", "ALLERGY",
+    "WHEEZING", "ALCOHOL CONSUMING", "COUGHING", "SHORTNESS OF BREATH",
+    "SWALLOWING DIFFICULTY", "CHEST PAIN",
+]
+SYMPTOMS = [c for c in FEATURES if c not in {"GENDER", "AGE"}]
+
 def load_processed_data(path: str | Path) -> tuple[pd.DataFrame, pd.Series]:
     file_path: Path = Path(path)
     data: pd.DataFrame = pd.read_csv(file_path)
