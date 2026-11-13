@@ -1,0 +1,52 @@
+{
+  "source_sha256": {
+    "data\\raw\\survey_lung_cancer.csv": "77e4f763ab845eae865907c3014088beab8fa2e1185676bff91387858c729b1b",
+    "data\\processed\\train.csv": "3ec0816a3495babcb5043353de1213b655f523f6aded8ddf226c6592b7bd958c",
+    "data\\processed\\test.csv": "4afe0a55a1bd088e738aecc39486ff50350c777fbc5f4a0e5a93c39bda16f1db",
+    "results\\random_forest\\holdout\\test_metrics.json": "c888ed0d46c12b96c8e191adc18acfc85407764dae7853bef02f95bd7f32660a",
+    "results\\random_forest\\holdout\\classification_report.json": "1c7d633d33d8a7932b17ef68c4735457d3d59b28a3bcb2793d01771ab50504db",
+    "results\\random_forest\\training_metadata.json": "496384332270bceb071c1eac4f01a86d0ad56d933ca6883439f1cb85e874a76b",
+    "results\\random_forest\\holdout\\test_predictions.csv": "55ab9dcbc27dc3e489a2b0bbab1c8a99da30cf19f1dbc25de1446c42b0e682fd",
+    "results\\random_forest\\holdout\\confusion_matrix.csv": "45ac302a17c8e29e1bee9ebc21d682673cba0406c0698b9ed2ec1fdd9e4fff8a",
+    "results\\XGBoost\\xgb_final_test_results.csv": "953169bf626c0098eca6e9633e63ca1e6de4b113311e2a764dbf153e3b25e832",
+    "src\\models\\XGBoost\\saved\\best_xgb_auc_lung_cancer.json": "577d52955cb8dbc08126c930581d3f3ccfd0c3fd30b83db57b555c563ba86072",
+    "src\\models\\XGBoost\\saved\\best_xgb_accuracy_lung_cancer.json": "577d52955cb8dbc08126c930581d3f3ccfd0c3fd30b83db57b555c563ba86072",
+    "src\\models\\XGBoost\\saved\\best_xgb_precision_lung_cancer.json": "577d52955cb8dbc08126c930581d3f3ccfd0c3fd30b83db57b555c563ba86072",
+    "src\\models\\XGBoost\\saved\\best_xgb_recall_lung_cancer.json": "9dd5557d19c5da27517dace7602a751bcf43b9b70c222948d0e5a8bf79195f2d",
+    "src\\models\\XGBoost\\saved\\best_xgb_f1_lung_cancer.json": "9dd5557d19c5da27517dace7602a751bcf43b9b70c222948d0e5a8bf79195f2d",
+    "results\\random_forest\\rf_baseline_cv.csv": "6b985fe0a4421e6dc081c7f30577ea067fb0727940374de3ba3e43b5281814c8",
+    "results\\XGBoost\\xgb_kfold_results.csv": "623463f231b047b3848f657635d5e7c49d25193dfdf847d69ee495ab6c2c0725",
+    "results\\random_forest\\search_results.csv": "f45078521684bc22e563971f0c3effc19fe22b0e4afafca68caa4bef92c0d3c7"
+  },
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "figures": [
+    "01_data_quality",
+    "02_class_balance",
+    "03_age_distribution",
+    "04_symptom_prevalence",
+    "05_feature_correlations",
+    "06_confusion_matrix_1",
+    "06_confusion_matrix_2",
+    "06_confusion_matrix_3",
+    "07_model_metric_comparison",
+    "08_grouped_model_comparison",
+    "09_error_counts",
+    "10_roc_precision_recall",
+    "11_cv_stability",
+    "12_shared_errors"
+  ],
+  "notes": [],
+  "test_samples": 56,
+  "class_counts": {
+    "NO": 8,
+    "YES": 48
+  },
+  "no_retraining": true
+}

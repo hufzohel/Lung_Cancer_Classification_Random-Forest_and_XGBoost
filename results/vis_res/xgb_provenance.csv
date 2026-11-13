@@ -1,0 +1,3 @@
+Model,JSON,Source
+XGBoost [AUC/Accuracy/Precision],src\models\XGBoost\saved\best_xgb_auc_lung_cancer.json,Inference from saved JSON; validated against saved CSV
+XGBoost [Recall/F1],src\models\XGBoost\saved\best_xgb_recall_lung_cancer.json,Inference from saved JSON; validated against saved CSV

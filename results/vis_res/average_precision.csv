@@ -1,0 +1,4 @@
+Model,Average precision YES
+Random Forest,0.9964981447124307
+XGBoost [AUC/Accuracy/Precision],0.9948229746444032
+XGBoost [Recall/F1],0.9957738095238098
