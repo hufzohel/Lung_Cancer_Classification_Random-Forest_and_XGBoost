@@ -56,8 +56,8 @@ def run_final_test():
         })
 
     xgb_test_results = pd.DataFrame(results)
-    os.makedirs("src/models/XGBoost/trained_and_tested", exist_ok=True)
-    xgb_test_results.to_csv(f"src/models/XGBoost/trained_and_tested/xgb_final_test_results.csv", index=False)
+    os.makedirs("results/XGBoost", exist_ok=True)
+    xgb_test_results.to_csv(f"results/XGBoost/xgb_final_test_results.csv", index=False)
 
 if __name__ == "__main__":
     run_final_test()

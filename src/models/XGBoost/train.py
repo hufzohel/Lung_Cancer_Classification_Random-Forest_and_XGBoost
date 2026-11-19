@@ -92,8 +92,7 @@ def run_kfold_training():
     print(f"Average Validation F1-Score across 5 folds: {np.mean(f1_scores):.4f}")
     print(f"Average Validation Precision across 5 folds: {np.mean(precision_scores):.4f}")
 
-    os.makedirs("src/models/XGBoost/trained", exist_ok=True)
-    os.makedirs("src/models/XGBoost/saved_and_tested", exist_ok=True)
+    os.makedirs("results/XGBoost", exist_ok=True)
 
     xgb_result = pd.DataFrame({
         'Fold': list(range(1, 6)),
@@ -103,7 +102,7 @@ def run_kfold_training():
         'F1-Score': f1_scores,
         'Precision': precision_scores
     })
-    xgb_result.to_csv("src/models/XGBoost/trained_and_tested/xgb_kfold_results.csv", index=False)
+    xgb_result.to_csv("results/XGBoost/xgb_kfold_results.csv", index=False)
 
     # Save the highest performing model for the final test
     best_model_auc.save_model("src/models/XGBoost/saved/best_xgb_auc_lung_cancer.json")
