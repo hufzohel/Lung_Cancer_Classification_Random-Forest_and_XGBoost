@@ -8,7 +8,7 @@ from sklearn.metrics import (
     confusion_matrix, f1_score, recall_score, roc_auc_score,
 )
 
-from common import ROOT, load_processed_data, save_json
+from src.common import ROOT, load_processed_data, save_json
 
 MODEL_PATH = ROOT / "results/random_forest/rf_model.joblib"
 DATA_PATH = ROOT / "data/processed/test.csv"

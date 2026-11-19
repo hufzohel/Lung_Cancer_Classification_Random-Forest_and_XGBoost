@@ -11,8 +11,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import make_scorer, recall_score
 from sklearn.model_selection import StratifiedKFold, cross_validate, GridSearchCV
 
-from common import load_processed_data, save_json
-from common import ROOT, SEED, FOLDS, JOBS
+from src.common import load_processed_data, save_json
+from src.common import ROOT, SEED, FOLDS, JOBS
 
 SCORING = {
     "accuracy": "accuracy",
